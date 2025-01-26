@@ -4,4 +4,5 @@
 - K3s
 - Any compatible CRI Runtime
 - Kubectl
+- Cert Manager
 
