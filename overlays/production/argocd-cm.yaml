@@ -1,0 +1,13 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: argocd-cm
+data:
+  application.resourceTrackingMethod: annotation
+  admin.enabled: 'true'
+  statusbadge.enabled: 'true'
+  users.anonymous.enabled: 'false'
+  kustomize.buildOptions: --enable-alpha-plugins --enable-helm --load-restrictor LoadRestrictionsNone
+
+  
+  url: http://argocd.homelab.local

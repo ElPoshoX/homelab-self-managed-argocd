@@ -1,0 +1,12 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: argo-cd-cert
+spec:
+  secretName: argocd-secret
+  issuerRef:
+    name: pfm-issuer
+    kind: ClusterIssuer
+  commonName: argocd.pfm.cibahealth.com
+  dnsNames:
+  - argocd.pfm.cibahealth.com
