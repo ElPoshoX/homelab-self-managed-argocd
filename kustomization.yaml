@@ -10,7 +10,6 @@ labels:
 resources:
 - base/argo-cd-namespace.yaml
 - base/rollouts-extension.yaml
-- https://github.com/cert-manager/cert-manager/releases/download/v1.16.3/cert-manager.yaml
 - base/argo-cd-certificate.yaml
 - https://raw.githubusercontent.com/argoproj/argo-cd/master/manifests/install.yaml
 
