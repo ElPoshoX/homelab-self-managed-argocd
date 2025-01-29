@@ -6,7 +6,7 @@ labels:
   pairs:
     app.kubernetes.io/managed-by: kustomize
     app.kubernetes.io/part-of: argocd
-    cibaheatlh.com/OwnedBy: ElPoshoX
+    homelab.local/OwnedBy: ElPoshoX
 resources:
 - base/argo-cd-namespace.yaml
 - base/argo-cd-redis-secret.yaml
