@@ -11,6 +11,7 @@ resources:
 - base/argo-cd-namespace.yaml
 - base/argo-cd-redis-secret.yaml
 - https://raw.githubusercontent.com/argoproj/argo-cd/v2.11.0/manifests/install.yaml 
+- base/argo-cd-ingressroute.yaml
 
 
 patches:
