@@ -6,10 +6,9 @@ labels:
   pairs:
     app.kubernetes.io/managed-by: kustomize
     app.kubernetes.io/part-of: argocd
-    cibaheatlh.com/OwnedBy: platform-team
+    cibaheatlh.com/OwnedBy: ElPoshoX
 resources:
 - base/argo-cd-namespace.yaml
-- base/argo-cd-certificate.yaml
 - base/argo-cd-redis-secret.yaml
 - https://raw.githubusercontent.com/argoproj/argo-cd/master/manifests/install.yaml
 
