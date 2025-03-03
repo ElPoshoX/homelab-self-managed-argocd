@@ -1,21 +1,24 @@
-# Please edit the object below. Lines beginning with a '#' will be ignored,
-# and an empty file will abort the edit. If an error occurs while saving this file will be
-# reopened with the relevant failures.
-#
-apiVersion: traefik.io/v1alpha1
-kind: IngressRoute
+apiVersion: networking.k8s.io/v1
+kind: Ingress
 metadata:
   name: argocd
-  namespace: argocd
+  annotations:
+    nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+    nginx.ingress.kubernetes.io/ssl-redirect: true
+    nginx.org/mergeable-ingress-type: "minion"
 spec:
-  entryPoints:
-  - websecure
-  routes:
-  - kind: Rule
-    match: Host(`argocd.elposhox.dev`)
-    services:
-    - kind: Service
-      name: argocd-server
-      port: 80
   tls:
-    secretName: domain-tls
+    - hosts:
+        - argocd.elposhox.dev
+  ingressClassName: nginx
+  rules:
+  - host: 'argocd.elposhox.dev'
+    http:
+      paths:
+        - path: /
+          pathType: Prefix
+          backend:
+            service:
+              name: argocd-server
+              port:
+                number: 80
