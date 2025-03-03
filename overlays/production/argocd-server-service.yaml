@@ -10,4 +10,4 @@ spec:
     targetPort: 8080
   type: LoadBalancer
   internalTrafficPolicy: Cluster
-  externalTrafficPolicy: Cluster
+  # externalTrafficPolicy: Cluster
