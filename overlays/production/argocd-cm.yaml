@@ -9,5 +9,7 @@ data:
   users.anonymous.enabled: 'false'
   kustomize.buildOptions: --enable-alpha-plugins --enable-helm --load-restrictor LoadRestrictionsNone
 
+  accounts.homepage: apiKey
+
   
   url: http://argocd.elposhox.dev

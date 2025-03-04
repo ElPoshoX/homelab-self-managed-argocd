@@ -13,6 +13,7 @@ resources:
 - https://raw.githubusercontent.com/argoproj/argo-cd/v2.13.3/manifests/install.yaml
 - base/argo-cd-ingress.yaml
 - base/argo-cd-platform-project.yaml
+- base/argo-cd-rbac-cm.yaml
 
 
 patches:
