@@ -1,24 +1,15 @@
-apiVersion: networking.k8s.io/v1
-kind: Ingress
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
 metadata:
   name: argocd
-  annotations:
-    nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
-    nginx.ingress.kubernetes.io/ssl-redirect: true
-    nginx.org/mergeable-ingress-type: "minion"
 spec:
-  tls:
-    - hosts:
-        - argocd.elposhox.dev
-  ingressClassName: nginx
-  rules:
-  - host: 'argocd.elposhox.dev'
-    http:
-      paths:
-        - path: /
-          pathType: Prefix
-          backend:
-            service:
-              name: argocd-server
-              port:
-                number: 80
+  entryPoints:
+  - websecure
+  routes:
+  - kind: Rule
+    match: Host(`argocd.elposhox.dev`)
+    services:
+    - kind: Service
+      name: argocd-service
+      port: 80
+          
