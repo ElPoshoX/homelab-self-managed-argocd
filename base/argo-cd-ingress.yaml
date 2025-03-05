@@ -10,6 +10,6 @@ spec:
     match: Host(`argocd.elposhox.dev`)
     services:
     - kind: Service
-      name: argocd-service
+      name: argocd-server
       port: 80
           
