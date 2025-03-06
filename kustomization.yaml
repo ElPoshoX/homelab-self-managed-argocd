@@ -14,6 +14,7 @@ resources:
 - base/argocd-ingress.yaml
 - base/argocd-platform-project.yaml
 - base/argocd-pvc.yaml
+- base/argocd-secret.yaml
 
 
 patches:
@@ -24,5 +25,5 @@ patches:
 
 images:
 - name: quay.io/argoproj/argocd
-  newName: ghcr.io/argoproj/argocd/argocd
+  newName: ghcr.io/argoproj/argo-cd/argocd
   newTag: 3.0.0-7327093b
