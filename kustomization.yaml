@@ -13,6 +13,7 @@ resources:
 - https://raw.githubusercontent.com/argoproj/argo-cd/v2.13.3/manifests/install.yaml
 - base/argocd-ingress.yaml
 - base/argocd-platform-project.yaml
+- base/argocd-pvc.yaml
 
 
 patches:
