@@ -8,20 +8,20 @@ labels:
     app.kubernetes.io/part-of: argocd
     homelab.local/OwnedBy: ElPoshoX
 resources:
-- base/argo-cd-namespace.yaml
-- base/argo-cd-redis-secret.yaml
+- base/argocd-namespace.yaml
+- base/argocd-redis-secret.yaml
 - https://raw.githubusercontent.com/argoproj/argo-cd/v2.13.3/manifests/install.yaml
-- base/argo-cd-ingress.yaml
-- base/argo-cd-platform-project.yaml
+- base/argocd-ingress.yaml
+- base/argocd-platform-project.yaml
 
 
 patches:
 - path: overlays/production/argocd-cm.yaml
 - path: overlays/production/argocd-server-service.yaml
 - path: overlays/production/argocd-cmd-params-cm.yaml
-- path: overlays/production/argo-cd-rbac-cm.yaml
+- path: overlays/production/argocd-rbac-cm.yaml
 
 images:
 - name: quay.io/argoproj/argocd
-  newName: ghcr.io/argoproj/argo-cd/argocd
+  newName: ghcr.io/argoproj/argocd/argocd
   newTag: 3.0.0-544aea18
