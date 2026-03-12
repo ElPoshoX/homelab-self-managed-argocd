@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: AppProject
 metadata:
-  name: platform
+  name: homelab
   namespace: argocd
   # Finalizer that ensures that project is not deleted until it is not referenced by any application
   finalizers:
@@ -10,7 +10,7 @@ spec:
   orphanedResources:
     warn: false # Disable warning
   # Project description
-  description: Dedicated to allocate everything related to the platform environment
+  description: Dedicated to allocate everything related to the homelab environment
   sourceRepos:
   - '*'
   destinations:
