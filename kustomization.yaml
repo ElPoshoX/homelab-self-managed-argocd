@@ -10,10 +10,9 @@ labels:
 resources:
 - base/argocd-namespace.yaml
 - base/argocd-redis-secret.yaml
-- https://raw.githubusercontent.com/argoproj/argo-cd/v3.3.3/manifests/install.yaml
+- https://raw.githubusercontent.com/argoproj/argo-cd/v3.3.4/manifests/install.yaml
 - base/argocd-ingress.yaml
-- base/argocd-platform-project.yaml
-- base/argocd-pvc.yaml
+- base/argocd-homelab-project.yaml
 - base/argocd-secret.yaml
 
 
@@ -26,4 +25,4 @@ patches:
 images:
 - name: quay.io/argoproj/argocd
   newName: ghcr.io/argoproj/argo-cd/argocd
-  newTag: 3.4.0-6a902023
+  newTag: 3.5.0-4070b6fe
